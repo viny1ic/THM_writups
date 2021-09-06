@@ -33,3 +33,16 @@ an interesting binary is the less binary, which also lets us read the contents o
 <br><b>it works. we find our first secret!!</b><br>
 lets look at the contents owned by the user "rick" (in the directory /home/rick). we see one file named "secret ingredients".
 <br><b>running the less command easily reveals its secret!!</b>
+<br>Now we have to look for the third ingredient. Something tells me to check the root directory.
+so i ran the command
+```
+sudo ls /root
+```
+thankfully, we were able to run sudo commands!
+![img root](root.png)
+to view the last text file we run:
+```
+sudo less /root/3rd.txt
+```
+with this we clear the ice room.<br>
+<img src="https://emojis.slackmojis.com/emojis/images/1563480763/5999/meow_party.gif?1563480763" width="30"/><img src="https://emojis.slackmojis.com/emojis/images/1563480763/5999/meow_party.gif?1563480763" width="30"/><img src="https://emojis.slackmojis.com/emojis/images/1563480763/5999/meow_party.gif?1563480763" width="30"/><img src="https://emojis.slackmojis.com/emojis/images/1563480763/5999/meow_party.gif?1563480763" width="30"/><img src="https://emojis.slackmojis.com/emojis/images/1563480763/5999/meow_party.gif?1563480763" width="30"/><img src="https://emojis.slackmojis.com/emojis/images/1563480763/5999/meow_party.gif?1563480763" width="30"/><img src="https://emojis.slackmojis.com/emojis/images/1563480763/5999/meow_party.gif?1563480763" width="30"/>
