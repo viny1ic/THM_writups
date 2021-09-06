@@ -4,13 +4,13 @@
 nmap -sV 10.10.197.37
 ```
 ![img for recon](recon.png)<br>
-we see that there is an apache server running on the machine. once we access it through our browser, we get the following webpage:
+we see that there is an apache server running on the machine. once we access it through our browser, we get the following webpage: <br>
 ![img for webpage](webpage.png)<br>
-lets look at the source code of the webpage. we see a comment that will be helpful to us:
+lets look at the source code of the webpage. we see a comment that will be helpful to us: <br>
 ![img for username](username.png)<br>
 since there is a web server, the only logical thing to do is to fuzz it. so we run dirbuser and use the "directory-list-2.3-small.txt" directory. <br>
-following are the results of the fuzzing:
-![img for fuzz](fuzz.png)
+following are the results of the fuzzing:<br>
+![img for fuzz](fuzz.png)<br>
 bingo! we found a login portal.
 ## 2. breaking in
 ![img for login](login.png) <br>
@@ -21,10 +21,10 @@ I decided to look in another direction at this point. fuzz results had included 
 <b>plugging the username we discovered earlier and the infamous string we just discovered into the login portal logged us in with no trouble </b>
 ![img for portal](portal.png) <br>
 all the other tabs in the portal contain the same content:<br>
-![img for tabs](tabs.png)
+![img for tabs](tabs.png)<br>
 The commands tab seems to be executing commands on the machine<br>
-![img for ID](id.png)
-running the ls command shows us that there is a fine of our interest in this directory:
+![img for ID](id.png)<br>
+running the ls command shows us that there is a fine of our interest in this directory:<br>
 ![img for secret1](secret1.png)<br>
 but we are unsuccesful when we try to read the file using the cat command. <br>
 ![img fail](fail.png)<br>
@@ -38,8 +38,8 @@ so i ran the command
 ```
 sudo ls /root
 ```
-thankfully, we were able to run sudo commands!
-![img root](root.png)
+thankfully, we were able to run sudo commands!<br>
+![img root](root.png)<br>
 to view the last text file we run:
 ```
 sudo less /root/3rd.txt
