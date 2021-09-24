@@ -49,7 +49,7 @@ cd /home/robot
 ls
 ```
 we find 2 files in this directory <br>
-![key2](key2.png)
+![key2](key2.png)<br>
 we are unable to read the contents of the key text file, however, we are able to read the contents of the md5 file. we can try bruteforcing the md5 hash. I will be using a custom google colab script I have written for fast bruteforcing. It is available in my hacking tools repo on my github. <br>
 ```
 !hashcat -m 0 -a 0 'c3fcd3d76192e4007dfb496cca67e13b' rockyou.txt
